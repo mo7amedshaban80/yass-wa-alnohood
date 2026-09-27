@@ -4,107 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رحلة نحو القمة - م. محمد وسام عادل الشعبان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+            --text-light: #555555;
+            --border-color: #e1e8ed;
+        }
+
         body {
-            font-family: Tahoma, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            text-align: right;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 20px;
-            line-height: 2;
+            padding: 0;
+            line-height: 2.2;
         }
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-        h1 {
-            color: #1a365d;
+
+        .site-header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            padding: 60px 20px;
             text-align: center;
-            margin-bottom: 10px;
-            font-size: 2em;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        .subtitle {
-            color: #4a5568;
-            text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #edf2f7;
-            padding-bottom: 15px;
+
+        .site-header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
         }
+
+        .site-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: -30px auto 50px auto;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
         .story-content p {
-            margin-bottom: 25px;
-            font-size: 1.15em;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
             text-align: justify;
         }
-        .highlight {
-            background-color: #fffaf0;
-            border-right: 4px solid #dd6b20;
-            padding: 15px 20px;
-            margin: 25px 0;
+
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-right: 5px solid var(--accent-color);
+            padding: 20px 25px;
+            margin: 35px 0;
             border-radius: 0 8px 8px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
             font-style: italic;
         }
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        }
+
         .footer {
             text-align: center;
             margin-top: 50px;
-            color: #718096;
-            font-size: 0.95em;
-            border-top: 1px solid #edf2f7;
-            padding-top: 20px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            color: #888888;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 25px;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .site-header {
+                padding: 40px 15px;
+            }
+            .site-header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <header class="site-header">
         <h1>رحلة نحو القمة</h1>
         <div class="subtitle">قصة كفاح ونجاح - للمهندس: محمد وسام عادل الشعبان</div>
+    </header>
 
+    <main class="main-container">
         <div class="story-content">
-            <p><strong>المقدمة:</strong> يبدأ الإنسان حياته بخطوات قد تهزها الصعاب، ولكن باليقين والتوكل على الله تتهاوى المستحيلات. هذه قصة شاب لم يقبل بأن تنتهي حكايته عند منتصف الطريق، بل صارع من أجل حلمه ومن بين أيامها نوراَ يضيء عتبات المستقبل.</p>
+            <p><strong>المقدمة:</strong> يبدأ الإنسان حياته بخطوات قد تهزها الصعاب، ولكن باليقين والتوكل على الله تتهاوى المستحيلات. هذه قصة شاب لم يقبل بأن تنتهي حكايته عند منتصف الطريق، بل صارع من أجل حلمه ومن بين أيامه صاغ نورا يضيء عتبات المستقبل.</p>
 
-            <p>في سنين الدراسة، كان يراوده أحياناً شعور ثقيل بأن جهده لا يحدث فرقاً، وكان الجهد يضيع هباءً، ودائماً ما كانت تصادفه تحديات كبيرة واختبارات صعبة.</p>
+            <p>في سنين الدراسة، كان يراوده أحياناً شعور ثقيل بأن جهده لا يحدث فرقاً، وكان الجهد يبدو وكأنه يضيع هباءً، ودائماً ما كانت تصادفه تحديات كبيرة واختبارات صعبة تختبر طاقته وصبره.</p>
 
-            <div class="highlight">
+            <div class="highlight-box">
                 "إذ كيف لفتاة أن تقبل الارتباط برجل لا يملك سلاح العلم والشهادة؟"
             </div>
 
-            <p>هذه الكلمات بدلاً من أن تزرع الإحباط واليأس مجدداً، كان يتذكر ذات الكلمات والدافع، فستستعر طاقته ليواصل المسيرة بكل قوة وعزيمة، متحدياً الصعاب والرهبة من مادة "الرياضيات" تحديداً، لكنه أدى جميع الامتحانات متوكلاً على الحي القيوم.</p>
+            <p>هذه الكلمات بدلاً من أن تزرع الإحباط واليأس في قلبه، كانت بمثابة الشرارة التي أشعلت طاقته ليواصل المسيرة بكل قوة وعزيمة، متحدياً الصعاب والرهبة من مادة "الرياضيات" تحديداً، ليدخل جميع الامتحانات متوكلاً على الحي القيوم وحده.</p>
 
-            <p>وحين حانت لحظة اعلان النتائج، كان قلبه يخفق بشدة وهو يبحث عن اسمه بين الناجحين، وفجأة وقع بصره عليه، لترتجف عيناه بدموع الفرح وتكلل تعب السنين، وحوله كانت فرحة الأب والأُم والإخوة تعانق السماء احتفالاً بهذا النجاح العظيم.</p>
+            <p>وحين حانت لحظة إعلان النتائج، كان قلبه يخفق بشدة وهو يبحث عن اسمه بين الناجحين، وفجأة وقع بصره عليه، لترتجف عيناه بدموع الفرح وتكلل تعب السنين بالنجاح. وحوله كانت فرحة الأب والأم والإخوة تعانق السماء احتفالاً بهذا الإنجاز العظيم.</p>
 
-            <p>لم تتوقف الحكاية عند هذا الحد؛ بل استمرت الأيام والسنين بالعزيمة ذاتها، ليتخرج من تخصص الحاسبات والمعلومات، ويتزوج، ويحيش حياة هنيئة ومباركة، ليصبح اسمه المقترن بالنجاح والافتخار: <strong>المهندس محمد وسام عادل الشعبان</strong>.</p>
+            <p>لم تتوقف الحكاية عند هذا الحد؛ بل استمرت الأيام والسنين بالعزيمة ذاتها، ليتخرج من تخصص الحاسبات والمعلومات، ويتزوج، ويعيش حياة هنيئة ومباركة، ليصبح اسمه مقروناً بالنجاح والافتخار: <strong>المهندس محمد وسام عادل الشعبان</strong>.</p>
         </div>
 
-        <div class="gallery">
-            <img src="image_0.png.jpg" alt="صورة توثيقية 1">
-            <img src="image_1.png.jpg" alt="صورة توثيقية 2">
-            <img src="image_2.png.jpg" alt="صورة توثيقية 3">
-            <img src="image_3.png.jpg" alt="صورة توثيقية 4">
-        </div>
-
-        <div class="footer">
-            جميع الحقوق محفوظة ©  محمد وسام عادل الشعبان
-        </div>
-    </div>
+        <footer class="footer">
+            جميع الحقوق محفوظة © لـ محمد وسام عادل الشعبان
+        </footer>
+    </main>
 
 </body>
 </html>
